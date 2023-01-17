@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Interactive Paint Canvas</title>
+</head>
+
+<body>
+    <h1> Paint Your Own Picture</h1>
+
+
+
+
+
+
+    <div>
+
+        <!--   width input -->
+        <p> Set Width:
+            <input type="text" value="300" id="canvasWidth" onchange="setWidth(this.value)">
+            <!--   height input  -->
+            Set Height:
+            <input type="text" value="300" id="canvas" onchange="setHeight(this.value)">
+        </p>
+
+        <!--   main canvas -->
+        <canvas id="canvas1" onmousedown="startPaint()" onmousemove="doPaint(event.offsetX,event.offsetY)">
+            hello !
+          </canvas>
+        <!--   clear button -->
+        <p>
+            <input type="button" value="Clear" id="" onclick="clearCanvas">
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
