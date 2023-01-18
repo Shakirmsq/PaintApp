@@ -42,17 +42,30 @@ function isNumeric(value) {
 
 // Begin paint
 function startPaint() {
-    var isPainting = true;
+    isPainting = true;
 }
 // End paint
 function endPaint() {
-    var isPainting = false;
+    isPainting = false;
 }
 
 // Paint starts on  x and  y axis but from top left
 function doPaint(x, y) {
-    paintCircle(x, y);
-    if (startPaint()) {
+
+    if (isPainting) {
         paintCircle(x, y);
     }
+}
+
+// color change for drawing
+function changeColor(newColor) {
+    color = newColor;
+}
+
+// size change for drawing
+function resizeBrush(newSize) {
+    radius = newSize;
+    document.getElementById("sizeOutput").value = newSize;
+
+
 }

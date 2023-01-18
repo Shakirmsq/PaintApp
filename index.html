@@ -28,12 +28,22 @@
         </p>
 
         <!--   main canvas -->
-        <canvas id="canvas1" onmousedown="startPaint()" onmousemove="doPaint(event.offsetX,event.offsetY)">
+        <canvas id="canvas1" onmousedown="startPaint()" onmousemove="doPaint(event.offsetX,event.offsetY)" onmouseup="endPaint()">
             hello !
           </canvas>
+        <p>
+            Brush Color:
+            <input type="color" value="#000" onchange="changeColor(this.value)"> Brush Size:
+            <input type="range" value="10" min="1" max="50" onchange="resizeBrush(this.value)">
+            <!-- the size of brush can ALSO be change by using oninput function -->
+            <output id="sizeOutput">
+                <!-- also add getId elment and set to new size in changeColor function -->
+                10
+            </output>
+        </p>
         <!--   clear button -->
         <p>
-            <input type="button" value="Clear" id="" onclick="clearCanvas">
+            <input type="button" value="Clear Canvas" id="clear" onclick="clearCanvas()">
         </p>
 
     </div>
