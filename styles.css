@@ -1,3 +1,55 @@
+body {
+    margin: 20px;
+}
+
+h1 {
+    background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    margin: 20px;
+}
+
 canvas {
-    border: 2px solid black;
+    border: 1px solid gray;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+#boxSize {
+    margin: 30px;
+}
+
+#boxCanvas {
+    display: block;
+    margin: 30px;
+}
+
+#boxBrush {
+    margin: 30px;
+}
+
+#boxClear {
+    margin: 30px;
+}
+
+#clear {
+    color: white;
+    background-color: black;
+    margin: 20px;
+    padding: 10%;
+}
+
+#clear:active {
+    font-size: large;
+    color: black;
+    background-color: white;
 }

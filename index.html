@@ -17,34 +17,46 @@
 
 
 
-    <div>
+    <div class="container">
 
-        <!--   width input -->
-        <p> Set Width:
-            <input type="text" value="300" id="canvasWidth" onchange="setWidth(this.value)">
-            <!--   height input  -->
-            Set Height:
-            <input type="text" value="300" id="canvas" onchange="setHeight(this.value)">
-        </p>
+        <div class="box" id="boxSize">
+            <!--   width input -->
+            <p> Set Width:
+                <input type="text" value="300" id="canvasWidth" onchange="setWidth(this.value)">
+                <!--   height input  -->
+                Set Height:
+                <input type="text" value="300" id="canvas" onchange="setHeight(this.value)">
+            </p>
+        </div>
 
-        <!--   main canvas -->
-        <canvas id="canvas1" onmousedown="startPaint()" onmousemove="doPaint(event.offsetX,event.offsetY)" onmouseup="endPaint()">
-            hello !
-          </canvas>
-        <p>
-            Brush Color:
-            <input type="color" value="#000" onchange="changeColor(this.value)"> Brush Size:
-            <input type="range" value="10" min="1" max="50" onchange="resizeBrush(this.value)">
-            <!-- the size of brush can ALSO be change by using oninput function -->
-            <output id="sizeOutput">
-                <!-- also add getId elment and set to new size in changeColor function -->
-                10
-            </output>
-        </p>
-        <!--   clear button -->
-        <p>
-            <input type="button" value="Clear Canvas" id="clear" onclick="clearCanvas()">
-        </p>
+        <div class="box" id="boxCanvas">
+            <!--   main canvas -->
+            <canvas id="canvas1" onmousedown="startPaint()" onmousemove="doPaint(event.offsetX,event.offsetY)" onmouseup="endPaint()">
+    hello !
+  </canvas>
+        </div>
+        <div class="box" id="boxBrush">
+            <p>
+                Brush Color:
+                <input type="color" value="#000" onchange="changeColor(this.value)"> Brush Size:
+                <input type="range" value="10" min="1" max="50" onchange="resizeBrush(this.value)">
+                <!-- the size of brush can ALSO be change by using oninput function -->
+                <output id="sizeOutput">
+            <!-- also add getId elment and set to new size in changeColor function -->
+            10
+        </output>
+            </p>
+        </div>
+
+
+        <div class="box" id="boxClear">
+            <!--   clear button -->
+            <p>
+                <input type="button" value="Clear Canvas" id="clear" onclick="clearCanvas()">
+            </p>
+        </div>
+
+
 
     </div>
 
